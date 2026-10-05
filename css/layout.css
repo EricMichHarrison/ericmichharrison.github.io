@@ -38,10 +38,10 @@ body {
 /* Main Page Layout */
 
 #main-content {
-  margin: 225px 425px;
+  margin: 225px 200px;
   display: flex;
   flex-direction: column;
-  gap: 96px;
+  gap: 40px;
 }
 
 
@@ -98,11 +98,27 @@ body {
   gap: 34px;
 }
 
+#education-and-awards-seciton {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
 
-
+.education-date-text {
+  display: flex;
+  flex-direction: column;
+align-items: right;
+}
+.education-title-bar {
+  width: 100%;
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+   gap: 70%;
+}
 
 /* Project Section */
-
 #my-work-section {
   display: flex;
   flex-direction: column;
@@ -113,6 +129,22 @@ body {
   flex-direction: column;
   gap: 16px;
 }
+
+#education-and-awards-seciton {
+  display: flex;
+  flex-direction: column;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: black;
+  border-style: solid;
+  padding:10px;
+}
+
+.education-logo{
+  width: 20px;
+  height: 20px;
+}
+
 .projects-container {
   display: flex;
   gap: 34px 16px;
@@ -199,54 +231,5 @@ body {
       width: 100%;
       height: auto;
     }
-
-
-/* Extra Extra large devices (large laptops and desktops, 1200px and below) */
-@media only screen and (max-width: 1600px) {
-  #main-content {
-    margin: 225px 275px;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and below) */
-@media only screen and (max-width: 1200px) {
-  #main-content {
-    margin: 225px 175px;
-  }
-}
-
-/* Large devices (laptops/desktops, 1000px and below) */
-@media only screen and (max-width: 1000px) {
-  #main-content {
-    margin: 225px 75px;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 800px and below) */
-@media only screen and (max-width: 800px) {
-  #main-content {
-    margin: 150px 50px;
-  }
-
-  #portfolio-header {
-    flex-direction: column;
-  }
-
-  .project-card {
-    max-width: calc((100% - 16px) / 2);
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and below) */
-@media only screen and (max-width: 600px) {
-  #main-content {
-    margin: 125px 20px;
-  }
-
-  .project-card {
-    max-width: 100%;
-  }
-}
-
 
 

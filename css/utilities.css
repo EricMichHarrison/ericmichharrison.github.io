@@ -24,6 +24,7 @@ a.icon-link:hover {
 }
 
 
+
 /* Navbar Styling */
 
 .navbar {
@@ -45,6 +46,8 @@ a.icon-link:hover {
   transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1), opacity 450ms ease-in-out;
   z-index: 10;
 }
+
+
 
 .nav-links {
   display: flex;

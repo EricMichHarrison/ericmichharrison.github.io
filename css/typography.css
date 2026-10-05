@@ -12,11 +12,6 @@ body {
   font-weight: 700;
 }
 
-.image-caption {
-  font-size: 14px;
-  font-weight: 500;
-}
-
 .main-title {
   font-size: 40px;
   font-weight: 700;
@@ -26,7 +21,10 @@ body {
   font-size: 20px;
   font-weight: 700;
 }
-
+.education-date-text {
+  font-size: 20px;
+  font-weight: 700;
+}
 .body-text {
   font-size: 16px;
   font-weight: 500;

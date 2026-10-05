@@ -4,6 +4,16 @@ if (document.getElementById('my-work-link')) {
   })
 }
 
+if (document.getElementById('my-project-link')) {
+  document.getElementById('my-project-link').addEventListener('click', () => {
+    document.getElementById('my-work-section').scrollIntoView({behavior: "smooth"})
+  })
+}
+if (document.getElementById('my-hobbies-link')) {
+  document.getElementById('my-hobbies-link').addEventListener('click', () => {
+    document.getElementById('my-hobbies-section').scrollIntoView({behavior: "smooth"})
+  })
+}
 const contactDialog = document.getElementById('contact-dialog');
 const contactButton = document.getElementById('contact-me-button');
 const closeContactDialogButton = document.getElementById('close-contact-dialog');
