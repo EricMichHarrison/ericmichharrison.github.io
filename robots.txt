@@ -1,5 +1,3 @@
 User-agent: *
 Disallow: /
 Disallow: /super-secret-dir/
-
-Sitemap: https://www.w3schools.com/sitemap.xml
