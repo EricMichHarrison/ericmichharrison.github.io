@@ -46,6 +46,7 @@ contactDialog.addEventListener('cancel', (event) => {
 });
 
 const navbar = document.querySelector('.navbar');
+const scrollToTopButton = document.getElementById('scroll-to-top');
 let lastScrollPosition = window.scrollY;
 
 window.addEventListener('scroll', () => {
@@ -57,5 +58,11 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('navbar-hidden');
   }
 
+  scrollToTopButton.classList.toggle('is-visible', currentScrollPosition > 300);
+
   lastScrollPosition = currentScrollPosition;
 }, { passive: true });
+
+scrollToTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
