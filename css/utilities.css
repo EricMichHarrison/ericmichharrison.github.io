@@ -77,7 +77,6 @@ a.icon-link:hover {
     transform 250ms ease;
   font: inherit;
   cursor: pointer;
-  transform: skew(-20deg);
 }
 
 .nav-title-link:hover {
@@ -123,30 +122,6 @@ a.button {
 }
 
 a.button:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  cursor: pointer;
-  background-color: var(--color-button-hover);
-}
-a.rhombus-button {
-  padding: 8px 16px;
-  border: 3px solid var(--color-text);
-  border-radius: 3px;
-  background-color: var(--color-button);
-  color: var(--color-text);
-  text-decoration: none;
-  width: fit-content;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease,
-    transform 250ms ease;
-  font: inherit;
-  cursor: pointer;
-  transform: skew(-20deg);
-}
-
-a.rhombus-button:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   cursor: pointer;

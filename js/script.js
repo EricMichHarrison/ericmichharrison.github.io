@@ -48,29 +48,34 @@ contactDialog.addEventListener('cancel', (event) => {
 const navbar = document.querySelector('.navbar');
 const scrollToTopButton = document.getElementById('scroll-to-top');
 let lastScrollPosition = window.scrollY;
+let scrollToTopButtonCloseTimeout;
+let isScrollToTopButtonVisible = false;
 
 const showScrollToTopButton = () => {
+  if (isScrollToTopButtonVisible) {
+    return;
+  }
+
+  clearTimeout(scrollToTopButtonCloseTimeout);
   scrollToTopButton.hidden = false;
   scrollToTopButton.classList.remove('scroll-to-top-closing');
   scrollToTopButton.classList.add('scroll-to-top-visible');
+  isScrollToTopButtonVisible = true;
 };
 
 const hideScrollToTopButton = () => {
-  if (scrollToTopButton.hidden) {
+  if (!isScrollToTopButtonVisible) {
     return;
   }
 
   scrollToTopButton.classList.remove('scroll-to-top-visible');
   scrollToTopButton.classList.add('scroll-to-top-closing');
-};
-
-scrollToTopButton.addEventListener('animationend', (event) => {
-  if (event.animationName === 'scroll-to-top-out' &&
-      scrollToTopButton.classList.contains('scroll-to-top-closing')) {
+  isScrollToTopButtonVisible = false;
+  scrollToTopButtonCloseTimeout = setTimeout(() => {
     scrollToTopButton.hidden = true;
     scrollToTopButton.classList.remove('scroll-to-top-closing');
-  }
-});
+  }, 250);
+};
 
 window.addEventListener('scroll', () => {
   const currentScrollPosition = window.scrollY;
