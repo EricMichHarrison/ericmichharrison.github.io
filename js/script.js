@@ -49,6 +49,29 @@ const navbar = document.querySelector('.navbar');
 const scrollToTopButton = document.getElementById('scroll-to-top');
 let lastScrollPosition = window.scrollY;
 
+const showScrollToTopButton = () => {
+  scrollToTopButton.hidden = false;
+  scrollToTopButton.classList.remove('scroll-to-top-closing');
+  scrollToTopButton.classList.add('scroll-to-top-visible');
+};
+
+const hideScrollToTopButton = () => {
+  if (scrollToTopButton.hidden) {
+    return;
+  }
+
+  scrollToTopButton.classList.remove('scroll-to-top-visible');
+  scrollToTopButton.classList.add('scroll-to-top-closing');
+};
+
+scrollToTopButton.addEventListener('animationend', (event) => {
+  if (event.animationName === 'scroll-to-top-out' &&
+      scrollToTopButton.classList.contains('scroll-to-top-closing')) {
+    scrollToTopButton.hidden = true;
+    scrollToTopButton.classList.remove('scroll-to-top-closing');
+  }
+});
+
 window.addEventListener('scroll', () => {
   const currentScrollPosition = window.scrollY;
 
@@ -58,7 +81,11 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('navbar-hidden');
   }
 
-  scrollToTopButton.classList.toggle('is-visible', currentScrollPosition > 300);
+  if (currentScrollPosition > 300) {
+    showScrollToTopButton();
+  } else {
+    hideScrollToTopButton();
+  }
 
   lastScrollPosition = currentScrollPosition;
 }, { passive: true });
