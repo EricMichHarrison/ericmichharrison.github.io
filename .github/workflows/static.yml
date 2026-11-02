@@ -39,7 +39,7 @@ jobs:
           python-version: '3.x'
 
       - name: Generate PDF library
-        run: python generate_pdf_library.py
+        run: python generate_pdf_list.py
 
       - name: Commit generated JSON
         run: |
