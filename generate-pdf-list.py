@@ -1,56 +1,48 @@
+
 import os
 import json
+from pathlib import Path
 
-# Website root directory
-WEBSITE_ROOT = r"C:\GithubProfile\ericmichharrison.github.io"
+# Website root directory (works on Windows and Linux)
+WEBSITE_ROOT = Path(__file__).resolve().parent
 
 # Project directory to scan
-ROOT = os.path.join(
-    WEBSITE_ROOT,
-    "assets",
-    "pages",
-    "projects"
-)
+ROOT = WEBSITE_ROOT / "assets" / "pages" / "projects"
 
 # Output JSON file
-OUTPUT = os.path.join(WEBSITE_ROOT, "pdf-list.json")
+OUTPUT = WEBSITE_ROOT / "pdf-list.json"
 
 pdf_groups = {}
 
-for current_dir, directories, files in os.walk(ROOT):
+if not ROOT.exists():
+    raise FileNotFoundError(f"Projects directory not found: {ROOT}")
 
+for current_dir, directories, files in os.walk(ROOT):
     directories.sort()
 
     for filename in sorted(files):
-
         if filename.lower().endswith(".pdf"):
+            full_path = Path(current_dir) / filename
 
-            full_path = os.path.join(current_dir, filename)
+            # Get path relative to website root
+            relative_path = full_path.relative_to(WEBSITE_ROOT)
 
-            # Get path relative to the website root
-            relative_path = os.path.relpath(
-                full_path,
-                WEBSITE_ROOT
-            )
-
-            # Convert Windows paths to website paths
-            web_path = "/" + relative_path.replace(os.sep, "/")
+            # Convert to website URL
+            web_path = "/" + relative_path.as_posix()
 
             # Get directory structure
-            relative_dir = os.path.relpath(
-                current_dir,
-                ROOT
-            )
-
-            parts = relative_dir.split(os.sep)
+            relative_dir = Path(current_dir).relative_to(ROOT)
+            parts = relative_dir.parts
 
             # First directory = project name
+            if not parts:
+                continue
+
             project = parts[0]
 
             # Last directory = category
-            category = os.path.basename(current_dir)
+            category = Path(current_dir).name
 
-            # Create project/category structure
             pdf_groups.setdefault(project, {})
             pdf_groups[project].setdefault(category, [])
 
@@ -60,9 +52,10 @@ for current_dir, directories, files in os.walk(ROOT):
             })
 
 # Generate JSON
-with open(OUTPUT, "w", encoding="utf-8") as f:
+with OUTPUT.open("w", encoding="utf-8") as f:
     json.dump(pdf_groups, f, indent=4)
 
 print("PDF library generated successfully!")
 print(f"Projects found: {len(pdf_groups)}")
+print(f"PDFs found: {sum(len(files) for cats in pdf_groups.values() for files in cats.values())}")
 print(f"Output: {OUTPUT}")
