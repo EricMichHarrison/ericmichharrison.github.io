@@ -1,17 +1,17 @@
 if (document.getElementById('my-work-link')) {
   document.getElementById('my-work-link').addEventListener('click', () => {
-    document.getElementById('my-work-section').scrollIntoView({behavior: "smooth"})
+    document.getElementById('my-work-section').scrollIntoView({ behavior: "smooth" })
   })
 }
 
 if (document.getElementById('my-project-link')) {
   document.getElementById('my-project-link').addEventListener('click', () => {
-    document.getElementById('my-work-section').scrollIntoView({behavior: "smooth"})
+    document.getElementById('my-work-section').scrollIntoView({ behavior: "smooth" })
   })
 }
 if (document.getElementById('my-hobbies-link')) {
   document.getElementById('my-hobbies-link').addEventListener('click', () => {
-    document.getElementById('my-hobbies-section').scrollIntoView({behavior: "smooth"})
+    document.getElementById('my-hobbies-section').scrollIntoView({ behavior: "smooth" })
   })
 }
 const contactDialog = document.getElementById('contact-dialog');
@@ -98,3 +98,6 @@ window.addEventListener('scroll', () => {
 scrollToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+// auto image carosel

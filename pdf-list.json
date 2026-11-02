@@ -1,0 +1,24 @@
+{
+    "landingGear": {
+        "Indivudual Parts": [
+            {
+                "name": "dummy.pdf",
+                "path": "/assets/pages/projects/landingGear/Indivudual Parts/dummy.pdf"
+            }
+        ],
+        "subAssemblies": [
+            {
+                "name": "bayDoorsAssembly.pdf",
+                "path": "/assets/pages/projects/landingGear/subAssemblies/bayDoorsAssembly.pdf"
+            },
+            {
+                "name": "strutAssembly.pdf",
+                "path": "/assets/pages/projects/landingGear/subAssemblies/strutAssembly.pdf"
+            },
+            {
+                "name": "wheelAssembly.pdf",
+                "path": "/assets/pages/projects/landingGear/subAssemblies/wheelAssembly.pdf"
+            }
+        ]
+    }
+}

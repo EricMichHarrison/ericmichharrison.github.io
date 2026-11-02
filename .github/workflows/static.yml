@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Generate PDF Library & Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -22,6 +22,38 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  generate-pdf-library:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate PDF library
+        run: python generate_pdf_library.py
+
+      - name: Commit generated JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add pdf-list.json
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update PDF library"
+            git push
+          else
+            echo "PDF library is already up to date."
+          fi
   # Single deploy job since we're just deploying
   deploy:
     environment:
