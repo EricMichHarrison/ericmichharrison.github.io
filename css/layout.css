@@ -143,8 +143,10 @@ align-items: right;
 .education-logo{
   width: 20px;
   height: 20px;
+}.tool-logo{
+  width: 150px;
+  height:auto;
 }
-
 .projects-container {
   display: flex;
   gap: 34px 16px;

@@ -163,20 +163,20 @@
 
         <div class="project-section">
           <span class="subheader-text">Drawings</span>
-          <div id="project-pdf-carousel" style="width:100%;max-width:1000px;margin:auto;text-align:center;">
+          <div id="project-pdf-carousel-subassemblies" style="width:100%;max-width:1000px;margin:auto;text-align:center;">
 
             <h2>Landing Gear - Individual Parts</h2>
 
-            <iframe id="project-pdf-viewer" style="width:100%;height:600px;border:0;">
+            <iframe id="project-pdf-viewer-subassemblies" style="width:100%;height:600px;border:0;">
             </iframe>
 
             <div style="display:flex;justify-content:space-between;padding:12px;">
-              <a class="button" onclick="projectPDFMove(-1)">Previous</a>
-              <a id="project-pdf-download" class="button" href="" download>
+              <a class="button" id="project-pdf-previous-subassemblies">Previous</a>
+              <a id="project-pdf-download-subassemblies" class="button" href="" download>
                 <span>Download</span>
-                <span id="project-pdf-counter" hidden></span>
+                <span id="project-pdf-counter-subassemblies" hidden></span>
               </a>
-              <a class="button" onclick="projectPDFMove(1)">Next</a>
+              <a class="button" id="project-pdf-next-subassemblies">Next</a>
             </div>
 
           </div>
@@ -191,9 +191,11 @@
               let pdfs = [];
               let current = 0;
 
-              const viewer = document.getElementById("project-pdf-viewer");
-              const counter = document.getElementById("project-pdf-counter");
-              const downloadLink = document.getElementById("project-pdf-download");
+              const viewer = document.getElementById("project-pdf-viewer-subassemblies");
+              const counter = document.getElementById("project-pdf-counter-subassemblies");
+              const downloadLink = document.getElementById("project-pdf-download-subassemblies");
+              const previousButton = document.getElementById("project-pdf-previous-subassemblies");
+              const nextButton = document.getElementById("project-pdf-next-subassemblies");
 
               async function loadPDFs() {
                 try {
@@ -230,17 +232,20 @@
                   `${pdfs[current].name} (${current + 1}/${pdfs.length})`;
               }
 
-              window.projectPDFMove = function (direction) {
+              function movePDF(direction) {
                 if (!pdfs.length) return;
 
                 current = (current + direction + pdfs.length) % pdfs.length;
                 showPDF();
-              };
+              }
+
+              previousButton.addEventListener("click", () => movePDF(-1));
+              nextButton.addEventListener("click", () => movePDF(1));
 
               await loadPDFs();
 
               setInterval(() => {
-                if (pdfs.length) projectPDFMove(1);
+                if (pdfs.length) movePDF(1);
               }, 8000);
 
             })();

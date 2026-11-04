@@ -1,9 +1,9 @@
 {
     "landingGear": {
-        "Indivudual Parts": [
+        "individualParts": [
             {
                 "name": "dummy.pdf",
-                "path": "/assets/pages/projects/landingGear/Indivudual Parts/dummy.pdf"
+                "path": "/assets/pages/projects/landingGear/individualParts/dummy.pdf"
             }
         ],
         "subAssemblies": [
