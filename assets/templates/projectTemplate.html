@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="/assets/images/1311.png" />
+  <title>Aircraft Landing Gear</title>
+  <meta name="description" content="Aircraft landing gear system designed in SolidWorks - Eric Harrison's Portfolio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/typography.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <script defer src="/js/script.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a class="nav-title-link" href="/">
+      <span class="nav-title">Eric Harrison</span>
+    </a>
+    <div class="nav-links">
+      <a class="button" href="/assets/documents/Eric Harrison - Resume.pdf" target="_blank" rel="noopener">
+        <span class="button-text">My Resume</span>
+      </a>
+      <a class="button" id="contact-me-button">
+        <span class="button-text">Contact Me</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CONTACT METHODS POPUP -->
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title">
+    <div class="contact-dialog-header">
+      <h2 id="contact-dialog-title">Contact Methods</h2>
+      <button class="dialog-close-button" id="close-contact-dialog" type="button"
+        aria-label="Close contact options">&times;</button>
+    </div>
+    <div class="contact-methods">
+      <a href="mailto:harrison.eric.michael@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/eric-harrison-99a19339a" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/EricMichHarrison" target="_blank" rel="noopener">GitHub</a>
+      <a href="/assets/documents/Eric Harrison_0xBA2A4E47_public.asc" download>OpenGPG Public Key</a>
+    </div>
+  </dialog>
+
+  <button class="scroll-to-top" id="scroll-to-top" type="button" aria-label="Scroll to top" hidden>
+    <img src="/assets/icons/up-arrow.svg" alt="" aria-hidden="true">
+  </button>
+
+  <!-- MAIN PAGE CONTENT -->
+  <div id="main-content">
+
+    <!-- PROJECT HEADER -->
+    <div id="project-header">
+      <span class="main-title">Aircraft Landing Gear</span>
+      <div class="project-section">
+        <a class="button" href="/assets/projectSources/DP1-20261028-LandingGear-Group7.zip" target="_blank"
+          rel="noopener">
+          <span class="button-text">Project Files</span>
+        </a>
+      </div>
+      <img class="project-header-image" src="/assets/images/landingGear.png"
+        alt="SolidWorks render of the retractable landing gear assembly">
+    </div>
+
+    <!-- PROJECT DETAILS -->
+    <div id="project-details">
+      <div class="project-details-content">
+
+        <div class="project-section">
+          <span class="subheader-text">Overview</span>
+          <div class="body-text">
+            A retractable tricycle-type landing gear designed in SolidWorks for MECE 2310U (Concurrent Engineering
+            and Design) at Ontario Tech University. Group 7 (six students) designed the strut, wheel and brake
+            assembly, bay doors, and the uplock and downlock mechanisms to fit a 4 x 4 x 6 inch bay agreed with our
+            supergroup, then built a physical prototype from a Meccano kit that mirrors the CAD motion study.
+          </div>
+        </div>
+
+        <div class="project-section">
+          <span class="subheader-text">My Role</span>
+          <div class="body-text">
+            I worked on the CAD & motion simulation. The struts feature an oleo-pneumatic
+            shock strut with a main actuator, and locking pins.
+          </div>
+        </div>
+
+        <div class="project-section">
+          <span class="subheader-text">Design Requirements</span>
+          <ul class="project-list body-text">
+            <li>Ground clearance, tip-back angle, take-off rotation and overturn angle</li>
+            <li>Structural integrity, ground stability and ground controllability</li>
+            <li>Low cost, maintainable and manufacturable</li>
+            <li>Retractable nose-gear tricycle configuration</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <span class="subheader-text">Concept Generation and Selection</span>
+          <div class="body-text">
+            We sketched and CAD-modelled three concepts that folded and engaged differently, then compared them on
+            reliability, ease of movement and how well they fit the bay. We chose the first concept because its
+            downlock was very strong under load, it worked with gravity, and it was feasible to replicate in Meccano.
+          </div>
+          <div class="project-gallery-content">
+            <div class="gallery-image-container half-width">
+              <img class="gallery-image" src="/assets/images/landing-gear-sketch-1.png"
+                alt="SolidWorks linkage sketch with dimensions">
+              <span class="body-text">Linkage layout sketch with dimensions</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img class="gallery-image" src=/assets/images/landing-gear-sketch-2.png"
+                alt="Refined SolidWorks linkage sketch with dimensions">
+              <span class="body-text">Linkage layout sketch, refined</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <span class="subheader-text">Locking Mechanisms</span>
+          <div class="body-text">
+            <strong>Uplock.</strong> Holds the gear fully retracted against gravity, vibration and other forces until
+            deployment is commanded. The prototype uses an elastic and friction to hold it in place.
+          </div>
+          <div class="body-text">
+            <strong>Downlock.</strong> Locks the gear extended so it cannot fold when the aircraft touches down. A
+            metal catch lets it resist a significant load.
+          </div>
+        </div>
+
+        <div class="project-section">
+          <span class="subheader-text">CAD Motion Simulation</span>
+          <div class="body-text">
+            The motion study shows the linkage extending and retracting the gear through its full range inside the
+            bay, which let us find interference problems before building the prototype.
+          </div>
+          <div class="project-gallery-content">
+            <div class="gallery-image-container half-width">
+              <span class="body-text">Main assembly, side view</span>
+              <video class="gallery-image" controls muted loop playsinline preload="metadata"
+                src="/assets//Videos/Main Assembly Side.mp4#t=0"></video>
+            </div>
+            <div class="gallery-image-container half-width">
+              <span class="body-text">Main assembly, orthographic view</span>
+              <video class="gallery-image" controls muted loop playsinline preload="metadata"
+                src="/assets/Videos/Main Assembly Orthographic.mp4#t=0"></video>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <span class="subheader-text">Subassemblies</span>
+          <ul class="project-list body-text">
+            <li><strong>Strut:</strong> oleo-strut mount and housing, main piston, main and
+              secondary arms, locking pins and rings</li>
+            <li><strong>Wheels and brakes:</strong> dual rims, axle, brass washers, wheel frame and angled mounting
+              block</li>
+            <li><strong>Bay doors:</strong> main and sub doors, mounting beams, four door pistons, and locking pins and
+              rings</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <span class="subheader-text">Drawings</span>
+          <div id="project-pdf-carousel" style="width:100%;max-width:1000px;margin:auto;text-align:center;">
+
+            <h2>Landing Gear - Individual Parts</h2>
+
+            <iframe id="project-pdf-viewer" style="width:100%;height:600px;border:0;">
+            </iframe>
+
+            <div style="display:flex;justify-content:space-between;padding:12px;">
+              <a class="button" onclick="projectPDFMove(-1)">Previous</a>
+              <a id="project-pdf-download" class="button" href="" download>
+                <span>Download</span>
+                <span id="project-pdf-counter" hidden></span>
+              </a>
+              <a class="button" onclick="projectPDFMove(1)">Next</a>
+            </div>
+
+          </div>
+
+          <script>
+            (async function () {
+
+              // SELECT PROJECT AND CATEGORY
+              const PROJECT_NAME = "landingGear";
+              const CATEGORY_NAME = "subAssemblies";
+
+              let pdfs = [];
+              let current = 0;
+
+              const viewer = document.getElementById("project-pdf-viewer");
+              const counter = document.getElementById("project-pdf-counter");
+              const downloadLink = document.getElementById("project-pdf-download");
+
+              async function loadPDFs() {
+                try {
+                  const response = await fetch("/pdf-list.json");
+
+                  if (!response.ok) throw new Error("JSON unavailable");
+
+                  const data = await response.json();
+
+                  // Select only the requested project and category
+                  pdfs = data[PROJECT_NAME]?.[CATEGORY_NAME] || [];
+
+                  if (pdfs.length > 0) {
+                    current = 0;
+                    showPDF();
+                  } else {
+                    viewer.style.display = "none";
+                    counter.textContent = "No PDFs found.";
+                  }
+
+                } catch (error) {
+                  console.error(error);
+                  counter.textContent = "Unable to load PDFs.";
+                }
+              }
+
+              function showPDF() {
+                viewer.style.display = "block";
+                viewer.src = pdfs[current].path;
+                downloadLink.href = pdfs[current].path;
+                downloadLink.download = pdfs[current].name;
+
+                counter.textContent =
+                  `${pdfs[current].name} (${current + 1}/${pdfs.length})`;
+              }
+
+              window.projectPDFMove = function (direction) {
+                if (!pdfs.length) return;
+
+                current = (current + direction + pdfs.length) % pdfs.length;
+                showPDF();
+              };
+
+              await loadPDFs();
+
+              setInterval(() => {
+                if (pdfs.length) projectPDFMove(1);
+              }, 8000);
+
+            })();
+          </script>
+
+        </div>
+
+        <div class="project-section">
+          <span class="subheader-text">Bill of Materials</span>
+          <details class="bom-toggle body-text">
+            <summary>Show the full 35-line parts list</summary>
+            <div class="table-scroll">
+              <table class="project-table body-text">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Part</th>
+                    <th>Qty</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>1.5 in Brass Bushing</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>1 in Brass Bushing</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>20 mm Bolt</td>
+                    <td>7</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>20 mm Nut</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Brass Bushing</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Main Arm</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Strut Base</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>OLEO-Strut Mount</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Recoil Orifice</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Recoil Orifice Seal 2</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>Shock Strut Housing</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>Shock Strut Housing Seal 1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>12 mm Bolt</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>Secondary Arm</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>Downlock Pin</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>Strut Locking Pin</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td>Strut Locking Ring</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>18</td>
+                    <td>Main Piston Head</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>19</td>
+                    <td>Main Piston Housing</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>Main Piston Locking Pin</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>21</td>
+                    <td>Rim</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>22</td>
+                    <td>Wheel Brass Washer</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>23</td>
+                    <td>Wheel Frame Cap</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>24</td>
+                    <td>Wheel Frame Base</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>25</td>
+                    <td>Angled Wheel Mounting Block</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>26</td>
+                    <td>Bay Door Mounting Beam Side 1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>27</td>
+                    <td>Bay Door Mounting Beam Side 2</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>28</td>
+                    <td>Bay Door Side 1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>29</td>
+                    <td>Bay Door Side 2</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>30</td>
+                    <td>Door Piston Body</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>31</td>
+                    <td>Door Piston Head</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>32</td>
+                    <td>Sub Bay Door Side 1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>33</td>
+                    <td>Sub Bay Door Side 2</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>34</td>
+                    <td>Bay Doors Locking Pin</td>
+                    <td>34</td>
+                  </tr>
+                  <tr>
+                    <td>35</td>
+                    <td>Bay Doors Locking Ring</td>
+                    <td>34</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+
+        <div class="project-section">
+          <span class="subheader-text">Tools</span>
+          <div class="body-text">SolidWorks (parts, assemblies, drawings, motion study) and Meccano (physical prototype)
+          </div>
+        </div>
+
+        <div class="project-section">
+          <span class="subheader-text">Team</span>
+          <div class="body-text">Vedant Soni, Yusuf Kamran, Ahmed, Muhammad, Mohnish and Eric Harrison</div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <a class="icon-link" target="_blank" href="https://www.instagram.com/supremeegg75/">
+      <img src="/assets/icons/instagram.svg" class="footer-icon" alt="Instagram" />
+    </a>
+    <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/eric-harrison-99a19339a/">
+      <img src="/assets/icons/LinkedIn.svg" class="footer-icon" alt="LinkedIn" />
+    </a>
+    <a class="icon-link" href="mailto:harrison.eric.michael@gmail.com">
+      <img src="/assets/icons/mail.svg" class="footer-icon" alt="Email" />
+    </a>
+    <a class="icon-link" target="_blank" href="/assets/documents/Eric Harrison_0xBA2A4E47_public.asc" download>
+      <img src="/assets/icons/Icon-openpgp-376559346.ico" class="footer-icon" alt="OpenPGP key" />
+    </a>
+  </div>
+</body>
+
+</html>

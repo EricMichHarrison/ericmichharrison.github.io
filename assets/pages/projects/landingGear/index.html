@@ -11,55 +11,6 @@
   <link rel="stylesheet" href="/css/typography.css">
   <link rel="stylesheet" href="/css/utilities.css">
   <script defer src="/js/script.js"></script>
-
-  <!-- Only the few things the site stylesheets don't cover (section spacing, lists, tables).
-       Everything uses the site's own colour variables. -->
-  <style>
-    .project-section {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .project-list {
-      margin: 0;
-      padding-left: 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .table-scroll {
-      overflow-x: auto;
-    }
-
-    .project-table {
-      width: 100%;
-      border-collapse: collapse;
-      color: var(--color-text);
-    }
-
-    .project-table th,
-    .project-table td {
-      text-align: left;
-      padding: 8px 12px;
-      border-bottom: 2px solid var(--color-text);
-      vertical-align: top;
-    }
-
-    .project-table th {
-      background-color: var(--color-button);
-    }
-
-    .bom-toggle>summary {
-      cursor: pointer;
-      margin-bottom: 16px;
-    }
-
-    video.gallery-image {
-      background: #000;
-    }
-  </style>
 </head>
 
 <body>
@@ -69,9 +20,6 @@
       <span class="nav-title">Eric Harrison</span>
     </a>
     <div class="nav-links">
-      <a class="button" href="/index.html#my-work-section">
-        <span class="button-text">My Projects</span>
-      </a>
       <a class="button" href="/assets/documents/Eric Harrison - Resume.pdf" target="_blank" rel="noopener">
         <span class="button-text">My Resume</span>
       </a>
@@ -223,9 +171,12 @@
             </iframe>
 
             <div style="display:flex;justify-content:space-between;padding:12px;">
-              <button onclick="projectPDFMove(-1)">❮ Previous</button>
-              <span id="project-pdf-counter"></span>
-              <button onclick="projectPDFMove(1)">Next ❯</button>
+              <a class="button" onclick="projectPDFMove(-1)">Previous</a>
+              <a id="project-pdf-download" class="button" href="" download>
+                <span>Download</span>
+                <span id="project-pdf-counter" hidden></span>
+              </a>
+              <a class="button" onclick="projectPDFMove(1)">Next</a>
             </div>
 
           </div>
@@ -242,6 +193,7 @@
 
               const viewer = document.getElementById("project-pdf-viewer");
               const counter = document.getElementById("project-pdf-counter");
+              const downloadLink = document.getElementById("project-pdf-download");
 
               async function loadPDFs() {
                 try {
@@ -271,6 +223,8 @@
               function showPDF() {
                 viewer.style.display = "block";
                 viewer.src = pdfs[current].path;
+                downloadLink.href = pdfs[current].path;
+                downloadLink.download = pdfs[current].name;
 
                 counter.textContent =
                   `${pdfs[current].name} (${current + 1}/${pdfs.length})`;

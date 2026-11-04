@@ -45,3 +45,50 @@ body {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+
+/* Project Page */
+
+ .project-section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .project-list {
+      margin: 0;
+      padding-left: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+    }
+
+    .project-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: var(--color-text);
+    }
+
+    .project-table th,
+    .project-table td {
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 2px solid var(--color-text);
+      vertical-align: top;
+    }
+
+    .project-table th {
+      background-color: var(--color-button);
+    }
+
+    .bom-toggle>summary {
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+
+    video.gallery-image {
+      background: #000;
+    }
