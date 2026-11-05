@@ -50,7 +50,7 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git commit -m "Update PDF library"
-            git push -f
+            git push
           else
             echo "PDF library is already up to date."
           fi
