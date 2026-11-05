@@ -140,5 +140,141 @@
                 "path": "/assets/pages/projects/landingGear/subAssemblies/wheelAssembly.pdf"
             }
         ]
+    },
+    "scissorLift": {
+        "Individual Parts": [
+            {
+                "name": "44PNR42S-TB.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/44PNR42S-TB.pdf"
+            },
+            {
+                "name": "Base Locking Pin - Main.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Base Locking Pin - Main.pdf"
+            },
+            {
+                "name": "Base.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Base.pdf"
+            },
+            {
+                "name": "Button Casing.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Button Casing.pdf"
+            },
+            {
+                "name": "Button Nut.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Button Nut.pdf"
+            },
+            {
+                "name": "Button Red Button.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Button Red Button.pdf"
+            },
+            {
+                "name": "Caster Wheel Bolt.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Caster Wheel Bolt.pdf"
+            },
+            {
+                "name": "Caster Wheel Nut.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Caster Wheel Nut.pdf"
+            },
+            {
+                "name": "Control Box Locking Screw.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Control Box Locking Screw.pdf"
+            },
+            {
+                "name": "Control Box.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Control Box.pdf"
+            },
+            {
+                "name": "Cover Panel A.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Cover Panel A.pdf"
+            },
+            {
+                "name": "Cover Panel B.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Cover Panel B.pdf"
+            },
+            {
+                "name": "Cover Panel Locking Bolt.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Cover Panel Locking Bolt.pdf"
+            },
+            {
+                "name": "Hydraulic pump block.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Hydraulic pump block.pdf"
+            },
+            {
+                "name": "Lockin Pin - Locking Pin.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Lockin Pin - Locking Pin.pdf"
+            },
+            {
+                "name": "Locking Pin - Locking Plate.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Locking Pin - Locking Plate.pdf"
+            },
+            {
+                "name": "Locking Pin - Main (Long).pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Locking Pin - Main (Long).pdf"
+            },
+            {
+                "name": "Locking Pin - Main.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Locking Pin - Main.pdf"
+            },
+            {
+                "name": "Main Assembly.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Main Assembly.pdf"
+            },
+            {
+                "name": "Motor Housing.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Motor Housing.pdf"
+            },
+            {
+                "name": "Motor Rotor.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Motor Rotor.pdf"
+            },
+            {
+                "name": "Outer Casing.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Outer Casing.pdf"
+            },
+            {
+                "name": "Piston Shaft.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Piston Shaft.pdf"
+            },
+            {
+                "name": "Push Bar.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Push Bar.pdf"
+            },
+            {
+                "name": "Railling 1.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Railling 1.pdf"
+            },
+            {
+                "name": "Railling 2.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Railling 2.pdf"
+            },
+            {
+                "name": "Railling 3.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Railling 3.pdf"
+            },
+            {
+                "name": "Sliding Locking Pin - Main.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Sliding Locking Pin - Main.pdf"
+            },
+            {
+                "name": "Universal Locking pin shim.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Universal Locking pin shim.pdf"
+            },
+            {
+                "name": "instrument ball bearing_68_am.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/instrument ball bearing_68_am.pdf"
+            },
+            {
+                "name": "ladder.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/ladder.pdf"
+            },
+            {
+                "name": "scissor arm.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/scissor arm.pdf"
+            },
+            {
+                "name": "top platform.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/top platform.pdf"
+            }
+        ]
     }
 }
