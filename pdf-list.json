@@ -1,0 +1,280 @@
+{
+    "landingGear": {
+        "individualParts": [
+            {
+                "name": "1.5Inch Brass Bushing.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/1.5Inch Brass Bushing.pdf"
+            },
+            {
+                "name": "12mm Bolt.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/12mm Bolt.pdf"
+            },
+            {
+                "name": "1Inch Brassh Bushing.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/1Inch Brassh Bushing.pdf"
+            },
+            {
+                "name": "20mm Bolt.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/20mm Bolt.pdf"
+            },
+            {
+                "name": "20mm Nut.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/20mm Nut.pdf"
+            },
+            {
+                "name": "Angled Wheel Mounting Block.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Angled Wheel Mounting Block.pdf"
+            },
+            {
+                "name": "Bay Door Mounting Beam.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Bay Door Mounting Beam.pdf"
+            },
+            {
+                "name": "Bay Door.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Bay Door.pdf"
+            },
+            {
+                "name": "Bay Doors Locking Pin.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Bay Doors Locking Pin.pdf"
+            },
+            {
+                "name": "Bay Doors Locking Ring.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Bay Doors Locking Ring.pdf"
+            },
+            {
+                "name": "Brass-Bushing.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Brass-Bushing.pdf"
+            },
+            {
+                "name": "Door Piston Body.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Door Piston Body.pdf"
+            },
+            {
+                "name": "Door Piston Head.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Door Piston Head.pdf"
+            },
+            {
+                "name": "DownLock Pin.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/DownLock Pin.pdf"
+            },
+            {
+                "name": "Main Arm.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Main Arm.pdf"
+            },
+            {
+                "name": "Main Piston Head.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Main Piston Head.pdf"
+            },
+            {
+                "name": "Main Piston Housing.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Main Piston Housing.pdf"
+            },
+            {
+                "name": "Main Piston locking Pin.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Main Piston locking Pin.pdf"
+            },
+            {
+                "name": "OLEO-Strut Mount.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/OLEO-Strut Mount.pdf"
+            },
+            {
+                "name": "Recoil Oraface Seal 2.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Recoil Oraface Seal 2.pdf"
+            },
+            {
+                "name": "Rim.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Rim.pdf"
+            },
+            {
+                "name": "Secondary Arm.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Secondary Arm.pdf"
+            },
+            {
+                "name": "Shock Strut Housing Seal 1.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Shock Strut Housing Seal 1.pdf"
+            },
+            {
+                "name": "Shock Strut Housing.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Shock Strut Housing.pdf"
+            },
+            {
+                "name": "Strut Base.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Strut Base.pdf"
+            },
+            {
+                "name": "Strut Locking Pin.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Strut Locking Pin.pdf"
+            },
+            {
+                "name": "Strut Locking Ring.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Strut Locking Ring.pdf"
+            },
+            {
+                "name": "Sub Bay Door.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Sub Bay Door.pdf"
+            },
+            {
+                "name": "Wheel Brass Washer.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Wheel Brass Washer.pdf"
+            },
+            {
+                "name": "Wheel Frame Base.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Wheel Frame Base.pdf"
+            },
+            {
+                "name": "Wheel Frame Cap.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Wheel Frame Cap.pdf"
+            }
+        ],
+        "subAssemblies": [
+            {
+                "name": "bayDoorsAssembly.pdf",
+                "path": "/assets/pages/projects/landingGear/subAssemblies/bayDoorsAssembly.pdf"
+            },
+            {
+                "name": "strutAssembly.pdf",
+                "path": "/assets/pages/projects/landingGear/subAssemblies/strutAssembly.pdf"
+            },
+            {
+                "name": "wheelAssembly.pdf",
+                "path": "/assets/pages/projects/landingGear/subAssemblies/wheelAssembly.pdf"
+            }
+        ]
+    },
+    "scissorLift": {
+        "Individual Parts": [
+            {
+                "name": "44PNR42S-TB.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/44PNR42S-TB.pdf"
+            },
+            {
+                "name": "Base Locking Pin - Main.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Base Locking Pin - Main.pdf"
+            },
+            {
+                "name": "Base.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Base.pdf"
+            },
+            {
+                "name": "Button Casing.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Button Casing.pdf"
+            },
+            {
+                "name": "Button Nut.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Button Nut.pdf"
+            },
+            {
+                "name": "Button Red Button.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Button Red Button.pdf"
+            },
+            {
+                "name": "Caster Wheel Bolt.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Caster Wheel Bolt.pdf"
+            },
+            {
+                "name": "Caster Wheel Nut.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Caster Wheel Nut.pdf"
+            },
+            {
+                "name": "Control Box Locking Screw.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Control Box Locking Screw.pdf"
+            },
+            {
+                "name": "Control Box.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Control Box.pdf"
+            },
+            {
+                "name": "Cover Panel A.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Cover Panel A.pdf"
+            },
+            {
+                "name": "Cover Panel B.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Cover Panel B.pdf"
+            },
+            {
+                "name": "Cover Panel Locking Bolt.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Cover Panel Locking Bolt.pdf"
+            },
+            {
+                "name": "Hydraulic pump block.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Hydraulic pump block.pdf"
+            },
+            {
+                "name": "Lockin Pin - Locking Pin.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Lockin Pin - Locking Pin.pdf"
+            },
+            {
+                "name": "Locking Pin - Locking Plate.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Locking Pin - Locking Plate.pdf"
+            },
+            {
+                "name": "Locking Pin - Main (Long).pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Locking Pin - Main (Long).pdf"
+            },
+            {
+                "name": "Locking Pin - Main.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Locking Pin - Main.pdf"
+            },
+            {
+                "name": "Main Assembly.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Main Assembly.pdf"
+            },
+            {
+                "name": "Motor Housing.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Motor Housing.pdf"
+            },
+            {
+                "name": "Motor Rotor.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Motor Rotor.pdf"
+            },
+            {
+                "name": "Outer Casing.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Outer Casing.pdf"
+            },
+            {
+                "name": "Piston Shaft.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Piston Shaft.pdf"
+            },
+            {
+                "name": "Push Bar.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Push Bar.pdf"
+            },
+            {
+                "name": "Railling 1.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Railling 1.pdf"
+            },
+            {
+                "name": "Railling 2.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Railling 2.pdf"
+            },
+            {
+                "name": "Railling 3.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Railling 3.pdf"
+            },
+            {
+                "name": "Sliding Locking Pin - Main.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Sliding Locking Pin - Main.pdf"
+            },
+            {
+                "name": "Universal Locking pin shim.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/Universal Locking pin shim.pdf"
+            },
+            {
+                "name": "instrument ball bearing_68_am.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/instrument ball bearing_68_am.pdf"
+            },
+            {
+                "name": "ladder.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/ladder.pdf"
+            },
+            {
+                "name": "scissor arm.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/scissor arm.pdf"
+            },
+            {
+                "name": "top platform.pdf",
+                "path": "/assets/pages/projects/scissorLift/Individual Parts/top platform.pdf"
+            }
+        ]
+    }
+}
