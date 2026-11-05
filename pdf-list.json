@@ -2,8 +2,128 @@
     "landingGear": {
         "individualParts": [
             {
-                "name": "dummy.pdf",
-                "path": "/assets/pages/projects/landingGear/individualParts/dummy.pdf"
+                "name": "1.5Inch Brass Bushing.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/1.5Inch Brass Bushing.pdf"
+            },
+            {
+                "name": "12mm Bolt.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/12mm Bolt.pdf"
+            },
+            {
+                "name": "1Inch Brassh Bushing.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/1Inch Brassh Bushing.pdf"
+            },
+            {
+                "name": "20mm Bolt.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/20mm Bolt.pdf"
+            },
+            {
+                "name": "20mm Nut.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/20mm Nut.pdf"
+            },
+            {
+                "name": "Angled Wheel Mounting Block.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Angled Wheel Mounting Block.pdf"
+            },
+            {
+                "name": "Bay Door Mounting Beam.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Bay Door Mounting Beam.pdf"
+            },
+            {
+                "name": "Bay Door.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Bay Door.pdf"
+            },
+            {
+                "name": "Bay Doors Locking Pin.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Bay Doors Locking Pin.pdf"
+            },
+            {
+                "name": "Bay Doors Locking Ring.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Bay Doors Locking Ring.pdf"
+            },
+            {
+                "name": "Brass-Bushing.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Brass-Bushing.pdf"
+            },
+            {
+                "name": "Door Piston Body.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Door Piston Body.pdf"
+            },
+            {
+                "name": "Door Piston Head.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Door Piston Head.pdf"
+            },
+            {
+                "name": "DownLock Pin.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/DownLock Pin.pdf"
+            },
+            {
+                "name": "Main Arm.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Main Arm.pdf"
+            },
+            {
+                "name": "Main Piston Head.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Main Piston Head.pdf"
+            },
+            {
+                "name": "Main Piston Housing.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Main Piston Housing.pdf"
+            },
+            {
+                "name": "Main Piston locking Pin.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Main Piston locking Pin.pdf"
+            },
+            {
+                "name": "OLEO-Strut Mount.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/OLEO-Strut Mount.pdf"
+            },
+            {
+                "name": "Recoil Oraface Seal 2.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Recoil Oraface Seal 2.pdf"
+            },
+            {
+                "name": "Rim.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Rim.pdf"
+            },
+            {
+                "name": "Secondary Arm.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Secondary Arm.pdf"
+            },
+            {
+                "name": "Shock Strut Housing Seal 1.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Shock Strut Housing Seal 1.pdf"
+            },
+            {
+                "name": "Shock Strut Housing.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Shock Strut Housing.pdf"
+            },
+            {
+                "name": "Strut Base.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Strut Base.pdf"
+            },
+            {
+                "name": "Strut Locking Pin.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Strut Locking Pin.pdf"
+            },
+            {
+                "name": "Strut Locking Ring.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Strut Locking Ring.pdf"
+            },
+            {
+                "name": "Sub Bay Door.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Sub Bay Door.pdf"
+            },
+            {
+                "name": "Wheel Brass Washer.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Wheel Brass Washer.pdf"
+            },
+            {
+                "name": "Wheel Frame Base.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Wheel Frame Base.pdf"
+            },
+            {
+                "name": "Wheel Frame Cap.pdf",
+                "path": "/assets/pages/projects/landingGear/individualParts/Wheel Frame Cap.pdf"
             }
         ],
         "subAssemblies": [
