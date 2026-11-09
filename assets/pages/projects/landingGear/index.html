@@ -15,19 +15,21 @@
 
 <body>
   <!-- NAVBAR -->
-  <div class="navbar">
-    <a class="nav-title-link" href="/">
-      <span class="nav-title">Eric Harrison</span>
-    </a>
-    <div class="nav-links">
-      <a class="button" href="/assets/documents/Eric Harrison - Resume.pdf" target="_blank" rel="noopener">
-        <span class="button-text">My Resume</span>
-      </a>
-      <a class="button" id="contact-me-button">
-        <span class="button-text">Contact Me</span>
-      </a>
-    </div>
-  </div>
+  <div id="header-container"></div>
+  <script>// Fetch b.html and insert into header-container
+    fetch('/global/navbar.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to load navbar.html');
+        return response.text(); // Get content as text
+      })
+      .then(html => {
+        document.getElementById('header-container').innerHTML = html; // Insert content
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('header-container').innerHTML = '<p>Header failed to load.</p>';
+      });
+  </script>
 
   <!-- CONTACT METHODS POPUP -->
   <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title">
@@ -104,39 +106,37 @@
             reliability, ease of movement and how well they fit the bay. We chose the first concept because its
             downlock was very strong under load, it worked with gravity, and it was feasible to replicate in Meccano.
           </div>
-          <div >
+          <div>
             <div class="concept-content">
-                            <span class="body-text">Initial Concept Sketch 1</span>
+              <span class="body-text">Initial Concept Sketch 1</span>
 
-              <img class="concept-image" src="/assets/images/conceptSketch1.png"
-                alt="Initial Concept Sketch 1">
+              <img class="concept-image" src="/assets/images/conceptSketch1.png" alt="Initial Concept Sketch 1">
 
             </div>
             <div class="concept-content">
-                            <span class="body-text">Initial Concept Sketch 2</span>
+              <span class="body-text">Initial Concept Sketch 2</span>
 
-              <img class="concept-image" src="/assets/images/conceptSketch2.png"
-                alt="Initial Concept Sketch 2">
+              <img class="concept-image" src="/assets/images/conceptSketch2.png" alt="Initial Concept Sketch 2">
 
             </div>
             <div class="concept-content">
-                            <span class="body-text">Initial Concept Sketch 3</span>
+              <span class="body-text">Initial Concept Sketch 3</span>
 
-              <img class="concept-image" src="/assets/images/conceptSketch3.png"
-                alt="Initial Concept Sketch 3">
+              <img class="concept-image" src="/assets/images/conceptSketch3.png" alt="Initial Concept Sketch 3">
 
             </div>
           </div>
           <div class="project-gallery-content">
             <div class="gallery-image-container half-width">
-                            <span class="body-text">Refined linkage layout sketch In Downlock Position</span>
+              <span class="body-text" style="text-align:center;">Refined linkage layout sketch In Downlock
+                Position</span>
 
               <img class="gallery-image" src="/assets/images/downlockGeneralDim.png"
                 alt="SolidWorks linkage sketch in Downlock Position">
 
             </div>
             <div class="gallery-image-container half-width">
-                            <span class="body-text">Refined linkage layout sketch In Uplock Position</span>
+              <span class="body-text" style="text-align:center;">Refined linkage layout sketch In Uplock Position</span>
 
               <img class="gallery-image" src="/assets/images/uplockGeneralDim.png"
                 alt="Refined SolidWorks linkage sketch with dimensions">
@@ -165,12 +165,12 @@
           </div>
           <div class="project-gallery-content">
             <div class="gallery-image-container half-width">
-              <span class="body-text">Main assembly, side view</span>
+              <span class="body-text" style="text-align:center;">Side View</span>
               <video class="gallery-image" autoplay controls muted loop playsinline preload="metadata"
                 src="/assets//Videos/Main Assembly Side.mp4#t=0"></video>
             </div>
             <div class="gallery-image-container half-width">
-              <span class="body-text">Main assembly, orthographic view</span>
+              <span class="body-text" style="text-align:center;">Orthographic View</span>
               <video class="gallery-image" autoplay controls muted loop playsinline preload="metadata"
                 src="/assets/Videos/Main Assembly Orthographic.mp4#t=0"></video>
             </div>
@@ -207,19 +207,15 @@
               </a>
               <a class="button" id="project-pdf-next-subassemblies">Next</a>
             </div>
-
           </div>
 
           <script>
             (async function () {
-
-              // SELECT PROJECT AND CATEGORY
               const PROJECT_NAME = "landingGear";
               const CATEGORY_NAME = "subAssemblies";
 
               let pdfs = [];
               let current = 0;
-
               const viewer = document.getElementById("project-pdf-viewer-subassemblies");
               const counter = document.getElementById("project-pdf-counter-subassemblies");
               const downloadLink = document.getElementById("project-pdf-download-subassemblies");
@@ -229,24 +225,19 @@
               async function loadPDFs() {
                 try {
                   const response = await fetch("/pdf-list.json");
-
                   if (!response.ok) throw new Error("JSON unavailable");
 
                   const data = await response.json();
-
-                  // Select only the requested project and category
                   pdfs = data[PROJECT_NAME]?.[CATEGORY_NAME] || [];
 
                   if (pdfs.length > 0) {
-                    current = 0;
                     showPDF();
                   } else {
                     viewer.style.display = "none";
                     counter.textContent = "No PDFs found.";
                   }
-
                 } catch (error) {
-                  console.error(error);
+                  console.error("Unable to load PDF list:", error);
                   counter.textContent = "Unable to load PDFs.";
                 }
               }
@@ -256,26 +247,20 @@
                 viewer.src = pdfs[current].path;
                 downloadLink.href = pdfs[current].path;
                 downloadLink.download = pdfs[current].name;
-
-                counter.textContent =
-                  `${pdfs[current].name} (${current + 1}/${pdfs.length})`;
+                counter.textContent = `${pdfs[current].name} (${current + 1}/${pdfs.length})`;
               }
 
               function movePDF(direction) {
                 if (!pdfs.length) return;
-
                 current = (current + direction + pdfs.length) % pdfs.length;
                 showPDF();
               }
 
               previousButton.addEventListener("click", () => movePDF(-1));
               nextButton.addEventListener("click", () => movePDF(1));
-
               await loadPDFs();
-
             })();
           </script>
-
         </div>
 
         <div class="project-section">
@@ -301,14 +286,11 @@
 
           <script>
             (async function () {
-
-              // SELECT PROJECT AND CATEGORY
               const PROJECT_NAME = "landingGear";
               const CATEGORY_NAME = "individualParts";
 
               let pdfs = [];
               let current = 0;
-
               const viewer = document.getElementById("project-pdf-viewer-individual-parts");
               const counter = document.getElementById("project-pdf-counter-individual-parts");
               const downloadLink = document.getElementById("project-pdf-download-individual-parts");
@@ -318,24 +300,19 @@
               async function loadPDFs() {
                 try {
                   const response = await fetch("/pdf-list.json");
-
                   if (!response.ok) throw new Error("JSON unavailable");
 
                   const data = await response.json();
-
-                  // Select only the requested project and category
                   pdfs = data[PROJECT_NAME]?.[CATEGORY_NAME] || [];
 
                   if (pdfs.length > 0) {
-                    current = 0;
                     showPDF();
                   } else {
                     viewer.style.display = "none";
                     counter.textContent = "No PDFs found.";
                   }
-
                 } catch (error) {
-                  console.error(error);
+                  console.error("Unable to load PDF list:", error);
                   counter.textContent = "Unable to load PDFs.";
                 }
               }
@@ -345,23 +322,18 @@
                 viewer.src = pdfs[current].path;
                 downloadLink.href = pdfs[current].path;
                 downloadLink.download = pdfs[current].name;
-
-                counter.textContent =
-                  `${pdfs[current].name} (${current + 1}/${pdfs.length})`;
+                counter.textContent = `${pdfs[current].name} (${current + 1}/${pdfs.length})`;
               }
 
               function movePDF(direction) {
                 if (!pdfs.length) return;
-
                 current = (current + direction + pdfs.length) % pdfs.length;
                 showPDF();
               }
 
               previousButton.addEventListener("click", () => movePDF(-1));
               nextButton.addEventListener("click", () => movePDF(1));
-
               await loadPDFs();
-
             })();
           </script>
         </div>
@@ -580,20 +552,21 @@
   </div>
 
   <!-- FOOTER -->
-  <div id="footer">
-    <a class="icon-link" target="_blank" href="https://www.instagram.com/supremeegg75/">
-      <img src="/assets/icons/instagram.svg" class="footer-icon" alt="Instagram" />
-    </a>
-    <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/eric-harrison-99a19339a/">
-      <img src="/assets/icons/LinkedIn.svg" class="footer-icon" alt="LinkedIn" />
-    </a>
-    <a class="icon-link" href="mailto:harrison.eric.michael@gmail.com">
-      <img src="/assets/icons/mail.svg" class="footer-icon" alt="Email" />
-    </a>
-    <a class="icon-link" target="_blank" href="/assets/documents/Eric Harrison_0xBA2A4E47_public.asc" download>
-      <img src="/assets/icons/Icon-openpgp-376559346.ico" class="footer-icon" alt="OpenPGP key" />
-    </a>
-  </div>
+  <div id="footer-container"></div>
+  <script>// Fetch b.html and insert into header-container
+    fetch('/global/footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to load footer.html');
+        return response.text(); // Get content as text
+      })
+      .then(html => {
+        document.getElementById('footer-container').innerHTML = html; // Insert content
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('footer-container').innerHTML = '<p>footer failed to load.</p>';
+      });
+  </script>
 </body>
 
 </html>

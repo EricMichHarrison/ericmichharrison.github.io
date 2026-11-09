@@ -57,16 +57,21 @@ body {
 }
 
 #portfolio-header-image-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
   flex-basis: 50%;
+
 }
 
 .portfolio-header-image {
-  width: 80%;
+  width: 50%;
   height: auto;
-  border-radius: 14px;
+  border-radius: 100%;
+  border: #141414;
+  border-style: solid;
+  border-width: 5px;
 }
 
 #portfolio-header-text-container {
@@ -194,8 +199,10 @@ body {
 }
 
 .project-header-image {
-  width: 100%;
+  align-self: center;
+  width: 50%;
   height: auto;
+  border-radius: 2%;
 }
 
 #project-details {
@@ -239,12 +246,14 @@ body {
 .gallery-image {
   width: 100%;
   height: auto;
+  border-radius: 3%;
 }
 
 .concept-content {
   float: left;
   width: 33.33%;
   align-items: center;
+  text-align: center;
 }
 
 .concept-image {
@@ -252,5 +261,5 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  border-radius: 2%;
 }
-

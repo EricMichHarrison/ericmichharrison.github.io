@@ -100,4 +100,4 @@ scrollToTopButton.addEventListener('click', () => {
 });
 
 
-// auto image carosel
+

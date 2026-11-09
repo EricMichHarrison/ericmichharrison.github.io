@@ -1,1 +1,3 @@
 [![Generate PDF Library & Deploy static content to Pages](https://github.com/EricMichHarrison/ericmichharrison.github.io/actions/workflows/static.yml/badge.svg)](https://github.com/EricMichHarrison/ericmichharrison.github.io/actions/workflows/static.yml)
+
+just a personal website for a portfolio and other such things.

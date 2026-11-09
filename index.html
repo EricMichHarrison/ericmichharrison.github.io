@@ -4,17 +4,6 @@
 
 <head>
   <meta charset="utf-8">
-
-  <!-- 
-      TODO
-
-      Upload your Unemployable (or whatever photo you like) to the assets/images folder
-      and change the name of the image below to match the uploaded one
-
-      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
-
-      This should be the same across all pages.
-     -->
   <link rel="icon" href="/assets/images/bitmoji.png" />
   <title>(WIP) Eric Harrison Portfolio</title>
   <meta name="description" content="Eric Harrison's Portfolio.">
@@ -29,40 +18,21 @@
 
 <body>
   <!-- NAVBAR -->
-  <div class="navbar">
-    <a class="nav-title-link" href="">
-      <span class="nav-title">Eric Harrison</span>
-    </a>
-    <div class="nav-links">
-      <a class="button" href="/assets/documents/Eric Harrison - Resume.pdf" target="_blank" rel="noopener">
-        <span class="button-text">My Resume</span>
-      </a>
-      <a class="button" id="contact-me-button">
-        <span class="button-text">Contact Me</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- CONTACT METHODS POPUP -->
-  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title">
-    <div class="contact-dialog-header">
-      <h2 id="contact-dialog-title">Contact Methods</h2>
-      <button class="dialog-close-button" id="close-contact-dialog" type="button"
-        aria-label="Close contact options">&times;</button>
-    </div>
-    <div class="contact-methods">
-      <a href="https://linktr.ee/EricMHarrison">Linketree</a>
-      <a href="mailto:harrison.eric.michael@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/eric-harrison-99a19339a" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/EricMichHarrison" target="_blank" rel="noopener">GitHub</a>
-      <a href="/assets/documents/Eric Harrison_0xBA2A4E47_public.asc" download>OpenGPG Public Key</a>
-    </div>
-  </dialog>
-
-  <button class="scroll-to-top" id="scroll-to-top" type="button" aria-label="Scroll to top" hidden>
-    <img src="/assets/icons/up-arrow.svg" alt="" aria-hidden="true">
-  </button>
-
+  <div id="header-container"></div>
+  <script>// Fetch b.html and insert into header-container
+    fetch('/global/navbar.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to load navbar.html');
+        return response.text(); // Get content as text
+      })
+      .then(html => {
+        document.getElementById('header-container').innerHTML = html; // Insert content
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('header-container').innerHTML = '<p>Header failed to load.</p>';
+      });
+  </script>
   <!-- MAIN PAGE CONTENT -->
   <div id="main-content">
 
@@ -277,24 +247,21 @@
   </div>
 
   <!-- FOOTER -->
-  <div id="footer">
-    <a class="icon-link" target="_blank" href="https://www.instagram.com/supremeegg75/">
-      <image src="/assets/icons/instagram.svg" class="footer-icon" />
-    </a>
-    <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/eric-harrison-99a19339a/">
-      <image src="/assets/icons/LinkedIn.svg" class="footer-icon" />
-    </a>
-    <a class="icon-link" href="mailto:harrison.eric.michael@gmail.com">
-      <image src="/assets/icons/mail.svg" class="footer-icon" />
-    </a>
-    <a class="icon-link" target="_blank" href="https://github.com/EricMichHarrison">
-      <img src="/assets/icons/github.svg" class="footer-icon" />
-    </a>
-    <a class="icon-link" target="_blank" href="/assets/documents/Eric Harrison_0xBA2A4E47_public.asc" download>
-      <image src="/assets/icons/Icon-openpgp-376559346.ico" class="footer-icon" />
-    </a>
-
-  </div>
+  <div id="footer-container"></div>
+  <script>// Fetch b.html and insert into header-container
+    fetch('/global/footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to load footer.html');
+        return response.text(); // Get content as text
+      })
+      .then(html => {
+        document.getElementById('footer-container').innerHTML = html; // Insert content
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('footer-container').innerHTML = '<p>footer failed to load.</p>';
+      });
+  </script>
 
 </body>
 
