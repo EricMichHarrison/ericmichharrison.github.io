@@ -14,14 +14,11 @@ if (document.getElementById('my-hobbies-link')) {
     document.getElementById('my-hobbies-section').scrollIntoView({ behavior: "smooth" })
   })
 }
-const contactDialog = document.getElementById('contact-dialog');
-const contactButton = document.getElementById('contact-me-button');
-const closeContactDialogButton = document.getElementById('close-contact-dialog');
-
-contactButton.addEventListener('click', () => contactDialog.showModal());
+let contactDialogCloseTimeout;
 
 const closeContactDialog = () => {
-  if (!contactDialog.open) {
+  const contactDialog = document.getElementById('contact-dialog');
+  if (!contactDialog || !contactDialog.open) {
     return;
   }
 
@@ -32,17 +29,25 @@ const closeContactDialog = () => {
   }, 200);
 };
 
-closeContactDialogButton.addEventListener('click', closeContactDialog);
+document.addEventListener('click', (event) => {
+  if (!(event.target instanceof Element)) {
+    return;
+  }
 
-contactDialog.addEventListener('click', (event) => {
-  if (event.target === contactDialog) {
+  if (event.target.closest('#contact-me-button')) {
+    document.getElementById('contact-dialog')?.showModal();
+  } else if (event.target.closest('#close-contact-dialog')) {
+    closeContactDialog();
+  } else if (event.target.id === 'contact-dialog') {
     closeContactDialog();
   }
 });
 
-contactDialog.addEventListener('cancel', (event) => {
-  event.preventDefault();
-  closeContactDialog();
+document.addEventListener('cancel', (event) => {
+  if (event.target instanceof HTMLDialogElement && event.target.id === 'contact-dialog') {
+    event.preventDefault();
+    closeContactDialog();
+  }
 });
 
 const navbar = document.querySelector('.navbar');
@@ -98,6 +103,5 @@ window.addEventListener('scroll', () => {
 scrollToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
 
 
