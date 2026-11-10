@@ -22,41 +22,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  generate-pdf-library:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Generate PDF library
-        run: python generate-pdf-list.py
-
-      - name: Commit generated JSON
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add pdf-list.json
-
-          if ! git diff --cached --quiet; then
-            git commit -m "Update PDF library"
-            git push
-          else
-            echo "PDF library is already up to date."
-          fi
   # Single deploy job since we're just deploying
   deploy:
-    needs: generate-pdf-library
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
